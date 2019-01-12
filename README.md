@@ -1,0 +1,2 @@
+# miners
+just for mining
