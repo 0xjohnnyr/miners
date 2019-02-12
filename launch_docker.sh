@@ -32,7 +32,7 @@ sudo docker run --rm $image -c genkeypair > $mykeyfile
 function run() {
 
 name="zilliqa"
-ip="$IP"
+ip=$(curl https://ipinfo.io/ip --silent)
 port="33133"
 
 if [ "$1" = "cuda" ]
