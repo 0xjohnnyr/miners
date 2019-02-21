@@ -3,7 +3,7 @@
 prog=$(basename $0)
 mykeyfile=mykey.txt
 myaddrfile=myaddr.txt
-image=zilliqa/zilliqa:v4.0.2
+image=zilliqa/zilliqa:v4.1.0
 os=$(uname)
 
 case "$os" in
