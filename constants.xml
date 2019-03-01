@@ -60,6 +60,7 @@
         <RECOVERY_SYNC_TIMEOUT>5</RECOVERY_SYNC_TIMEOUT>
         <TX_DISTRIBUTE_TIME_IN_MS>20000</TX_DISTRIBUTE_TIME_IN_MS>
         <NEW_LOOKUP_SYNC_DELAY_IN_SECONDS>300</NEW_LOOKUP_SYNC_DELAY_IN_SECONDS>
+        <NEW_LOOKUP_GETSHARD_TIMEOUT_IN_SECONDS>3</NEW_LOOKUP_GETSHARD_TIMEOUT_IN_SECONDS>
     </epoch_timing>
     <fallback>
         <ENABLE_FALLBACK>false</ENABLE_FALLBACK>
@@ -141,7 +142,7 @@
         <SENDQUEUE_SIZE>420</SENDQUEUE_SIZE>
         <MAX_GOSSIP_MSG_SIZE_IN_BYTES>5000000</MAX_GOSSIP_MSG_SIZE_IN_BYTES>
         <MIN_READ_WATERMARK_IN_BYTES>0</MIN_READ_WATERMARK_IN_BYTES>
-        <MAX_READ_WATERMARK_IN_BYTES>20000000</MAX_READ_WATERMARK_IN_BYTES>
+        <MAX_READ_WATERMARK_IN_BYTES>60000000</MAX_READ_WATERMARK_IN_BYTES>
         <CONNECTION_TIMEOUT_IN_SECONDS>5</CONNECTION_TIMEOUT_IN_SECONDS>
     </p2pcomm>
     <pow>
@@ -167,7 +168,7 @@
         <DIFF_IP_TOLERANCE_IN_PERCENT>10</DIFF_IP_TOLERANCE_IN_PERCENT>
         <TXN_SHARD_TARGET_DIFFICULTY>100</TXN_SHARD_TARGET_DIFFICULTY>
         <TXN_DS_TARGET_DIFFICULTY>100</TXN_DS_TARGET_DIFFICULTY>
-        <TXN_DS_TARGET_NUM>313</TXN_DS_TARGET_NUM>
+        <TXN_DS_TARGET_NUM>600</TXN_DS_TARGET_NUM>
         <PRIORITY_TOLERANCE_IN_PERCENT>50</PRIORITY_TOLERANCE_IN_PERCENT>
     </pow>
     <recovery>
@@ -228,34 +229,34 @@
     </viewchange>
     <multipliers>
         <peer>
-            <ip>54.184.34.7</ip>
+            <ip>54.244.204.60</ip>
             <port>33133</port>
             <pubkey>026FD9085786876BD857AB3796FE76F44734B044AD04D9ED7A25AE42CBDE782ED5</pubkey>
-            <hostname>mainnet-outrampark-multiplier-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-multiplier-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.218.100.44</ip>
+            <ip>34.219.234.141</ip>
             <port>33133</port>
             <pubkey>028A419BF2D7DCEF032AD04F871CC5C7BFCB4AB01976FAF946E238EB7C63311472</pubkey>
-            <hostname>mainnet-outrampark-multiplier-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-multiplier-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>35.167.87.161</ip>
+            <ip>52.35.204.143</ip>
             <port>33133</port>
             <pubkey>02F4CF1F1E62D6E85ADF95B309F25601FFA71514F53A60B405ED71E9050206077B</pubkey>
-            <hostname>mainnet-outrampark-multiplier-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-multiplier-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.202.25.201</ip>
+            <ip>34.220.57.190</ip>
             <port>33133</port>
             <pubkey>03D72559341CA9E635217AEBFD06153792D17078904F06E6F68393EE0D863BA1BF</pubkey>
-            <hostname>mainnet-outrampark-multiplier-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-multiplier-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.221.28.87</ip>
+            <ip>34.220.64.242</ip>
             <port>33133</port>
             <pubkey>03D8C178FE9C153D8547A2CC2ADD730A59D1134DC3B1AE55AEE05D9E5B11CE56DC</pubkey>
-            <hostname>mainnet-outrampark-multiplier-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-multiplier-4.aws.zilliqa.com</hostname>
         </peer>
     </multipliers>
     <accounts>
@@ -271,66 +272,66 @@
     </accounts>
     <lookups>
         <peer>
-            <ip>18.237.2.215</ip>
+            <ip>54.202.163.94</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.186.231.63</ip>
+            <ip>52.26.112.5</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.220.97.173</ip>
+            <ip>35.161.129.207</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.149.147.163</ip>
+            <ip>54.212.208.103</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.213.183.174</ip>
+            <ip>34.213.138.186</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </lookups>
     <upper_seed>
         <peer>
-            <ip>18.237.2.215</ip>
+            <ip>54.202.163.94</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.186.231.63</ip>
+            <ip>52.26.112.5</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.220.97.173</ip>
+            <ip>35.161.129.207</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.149.147.163</ip>
+            <ip>54.212.208.103</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.213.183.174</ip>
+            <ip>34.213.138.186</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-outrampark-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-telokblangah-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </upper_seed>
     <lower_seed/>
