@@ -28,7 +28,7 @@
         <SEED_TXN_COLLECTION_TIME_IN_SEC>5</SEED_TXN_COLLECTION_TIME_IN_SEC>
     </seed>
     <consensus>
-        <COMMIT_WINDOW_IN_SECONDS>10</COMMIT_WINDOW_IN_SECONDS>
+        <COMMIT_WINDOW_IN_SECONDS>50</COMMIT_WINDOW_IN_SECONDS>
         <CONSENSUS_MSG_ORDER_BLOCK_WINDOW>10</CONSENSUS_MSG_ORDER_BLOCK_WINDOW>
         <CONSENSUS_OBJECT_TIMEOUT>20</CONSENSUS_OBJECT_TIMEOUT>
         <DS_NUM_CONSENSUS_SUBSETS>2</DS_NUM_CONSENSUS_SUBSETS>
@@ -51,7 +51,7 @@
     <epoch_timing>
         <DELAY_FIRSTXNEPOCH_IN_MS>2000</DELAY_FIRSTXNEPOCH_IN_MS>
         <FETCHING_MISSING_DATA_TIMEOUT>10</FETCHING_MISSING_DATA_TIMEOUT>
-        <ANNOUNCEMENT_DELAY_IN_MS>6000</ANNOUNCEMENT_DELAY_IN_MS>
+        <ANNOUNCEMENT_DELAY_IN_MS>10000</ANNOUNCEMENT_DELAY_IN_MS>
         <LOOKUP_DELAY_SEND_TXNPACKET_IN_MS>3000</LOOKUP_DELAY_SEND_TXNPACKET_IN_MS>
         <MICROBLOCK_TIMEOUT>150</MICROBLOCK_TIMEOUT>
         <NEW_NODE_SYNC_INTERVAL>45</NEW_NODE_SYNC_INTERVAL>
@@ -59,7 +59,7 @@
         <POW_WINDOW_IN_SECONDS>60</POW_WINDOW_IN_SECONDS>
         <POWPACKETSUBMISSION_WINDOW_IN_SECONDS>90</POWPACKETSUBMISSION_WINDOW_IN_SECONDS>
         <RECOVERY_SYNC_TIMEOUT>5</RECOVERY_SYNC_TIMEOUT>
-        <TX_DISTRIBUTE_TIME_IN_MS>20000</TX_DISTRIBUTE_TIME_IN_MS>
+        <TX_DISTRIBUTE_TIME_IN_MS>40000</TX_DISTRIBUTE_TIME_IN_MS>
         <NEW_LOOKUP_SYNC_DELAY_IN_SECONDS>300</NEW_LOOKUP_SYNC_DELAY_IN_SECONDS>
         <NEW_LOOKUP_GETSHARD_TIMEOUT_IN_SECONDS>3</NEW_LOOKUP_GETSHARD_TIMEOUT_IN_SECONDS>
     </epoch_timing>
@@ -232,34 +232,34 @@
     </viewchange>
     <multipliers>
         <peer>
-            <ip>52.37.183.25</ip>
+            <ip>52.89.207.102</ip>
             <port>33133</port>
             <pubkey>026FD9085786876BD857AB3796FE76F44734B044AD04D9ED7A25AE42CBDE782ED5</pubkey>
-            <hostname>mainnet-labradorpark-multiplier-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-multiplier-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.149.114.96</ip>
+            <ip>34.219.185.213</ip>
             <port>33133</port>
             <pubkey>028A419BF2D7DCEF032AD04F871CC5C7BFCB4AB01976FAF946E238EB7C63311472</pubkey>
-            <hostname>mainnet-labradorpark-multiplier-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-multiplier-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.244.11.183</ip>
+            <ip>34.222.52.194</ip>
             <port>33133</port>
             <pubkey>02F4CF1F1E62D6E85ADF95B309F25601FFA71514F53A60B405ED71E9050206077B</pubkey>
-            <hostname>mainnet-labradorpark-multiplier-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-multiplier-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.218.75.211</ip>
+            <ip>54.202.175.184</ip>
             <port>33133</port>
             <pubkey>03D72559341CA9E635217AEBFD06153792D17078904F06E6F68393EE0D863BA1BF</pubkey>
-            <hostname>mainnet-labradorpark-multiplier-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-multiplier-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.188.239.209</ip>
+            <ip>54.188.205.59</ip>
             <port>33133</port>
             <pubkey>03D8C178FE9C153D8547A2CC2ADD730A59D1134DC3B1AE55AEE05D9E5B11CE56DC</pubkey>
-            <hostname>mainnet-labradorpark-multiplier-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-multiplier-4.aws.zilliqa.com</hostname>
         </peer>
     </multipliers>
     <accounts>
@@ -275,66 +275,66 @@
     </accounts>
     <lookups>
         <peer>
-            <ip>54.202.228.133</ip>
+            <ip>34.221.26.12</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.214.107.203</ip>
+            <ip>34.220.190.13</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.212.123.205</ip>
+            <ip>54.184.27.178</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.185.179.39</ip>
+            <ip>18.236.248.30</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>52.12.19.252</ip>
+            <ip>54.200.0.105</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </lookups>
     <upper_seed>
         <peer>
-            <ip>54.202.228.133</ip>
+            <ip>34.221.26.12</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.214.107.203</ip>
+            <ip>34.220.190.13</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.212.123.205</ip>
+            <ip>54.184.27.178</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.185.179.39</ip>
+            <ip>18.236.248.30</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>52.12.19.252</ip>
+            <ip>54.200.0.105</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-labradorpark-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-hollandvillage-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </upper_seed>
     <lower_seed/>
