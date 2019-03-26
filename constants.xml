@@ -232,34 +232,34 @@
     </viewchange>
     <multipliers>
         <peer>
-            <ip>52.89.207.102</ip>
+            <ip>34.218.66.183</ip>
             <port>33133</port>
             <pubkey>026FD9085786876BD857AB3796FE76F44734B044AD04D9ED7A25AE42CBDE782ED5</pubkey>
-            <hostname>mainnet-hollandvillage-multiplier-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-multiplier-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.219.185.213</ip>
+            <ip>18.237.4.181</ip>
             <port>33133</port>
             <pubkey>028A419BF2D7DCEF032AD04F871CC5C7BFCB4AB01976FAF946E238EB7C63311472</pubkey>
-            <hostname>mainnet-hollandvillage-multiplier-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-multiplier-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.222.52.194</ip>
+            <ip>52.27.239.148</ip>
             <port>33133</port>
             <pubkey>02F4CF1F1E62D6E85ADF95B309F25601FFA71514F53A60B405ED71E9050206077B</pubkey>
-            <hostname>mainnet-hollandvillage-multiplier-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-multiplier-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.202.175.184</ip>
+            <ip>35.163.13.248</ip>
             <port>33133</port>
             <pubkey>03D72559341CA9E635217AEBFD06153792D17078904F06E6F68393EE0D863BA1BF</pubkey>
-            <hostname>mainnet-hollandvillage-multiplier-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-multiplier-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.188.205.59</ip>
+            <ip>34.208.133.232</ip>
             <port>33133</port>
             <pubkey>03D8C178FE9C153D8547A2CC2ADD730A59D1134DC3B1AE55AEE05D9E5B11CE56DC</pubkey>
-            <hostname>mainnet-hollandvillage-multiplier-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-multiplier-4.aws.zilliqa.com</hostname>
         </peer>
     </multipliers>
     <accounts>
@@ -275,66 +275,66 @@
     </accounts>
     <lookups>
         <peer>
-            <ip>34.221.26.12</ip>
+            <ip>52.24.66.141</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.220.190.13</ip>
+            <ip>34.215.137.93</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.184.27.178</ip>
+            <ip>34.219.217.181</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>18.236.248.30</ip>
+            <ip>52.27.73.201</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.200.0.105</ip>
+            <ip>54.184.34.217</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </lookups>
     <upper_seed>
         <peer>
-            <ip>34.221.26.12</ip>
+            <ip>52.24.66.141</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.220.190.13</ip>
+            <ip>34.215.137.93</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.184.27.178</ip>
+            <ip>34.219.217.181</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>18.236.248.30</ip>
+            <ip>52.27.73.201</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.200.0.105</ip>
+            <ip>54.184.34.217</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-hollandvillage-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-serangoon-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </upper_seed>
     <lower_seed/>
