@@ -62,6 +62,9 @@
         <TX_DISTRIBUTE_TIME_IN_MS>40000</TX_DISTRIBUTE_TIME_IN_MS>
         <NEW_LOOKUP_SYNC_DELAY_IN_SECONDS>300</NEW_LOOKUP_SYNC_DELAY_IN_SECONDS>
         <NEW_LOOKUP_GETSHARD_TIMEOUT_IN_SECONDS>3</NEW_LOOKUP_GETSHARD_TIMEOUT_IN_SECONDS>
+        <GETSTATEDELTAS_TIMEOUT_IN_SECONDS>5</GETSTATEDELTAS_TIMEOUT_IN_SECONDS>
+        <RETRY_REJOINING_TIMEOUT>10</RETRY_REJOINING_TIMEOUT>
+        <RETRY_GETSTATEDELTAS_COUNT>3</RETRY_GETSTATEDELTAS_COUNT>
     </epoch_timing>
     <fallback>
         <ENABLE_FALLBACK>false</ENABLE_FALLBACK>
@@ -128,6 +131,11 @@
     <heartbeat>
         <HEARTBEAT_INTERVAL_IN_SECONDS>0</HEARTBEAT_INTERVAL_IN_SECONDS>
     </heartbeat>
+    <jsonrpc>
+        <RPC_PORT>4201</RPC_PORT>
+        <IP_TO_BIND>127.0.0.1</IP_TO_BIND>
+        <ENABLE_STATUS_RPC>false</ENABLE_STATUS_RPC>
+    </jsonrpc>
     <network_composition>
         <COMM_SIZE>600</COMM_SIZE>
         <NUM_DS_ELECTION>10</NUM_DS_ELECTION>
@@ -147,6 +155,7 @@
         <MIN_READ_WATERMARK_IN_BYTES>0</MIN_READ_WATERMARK_IN_BYTES>
         <MAX_READ_WATERMARK_IN_BYTES>120000000</MAX_READ_WATERMARK_IN_BYTES>
         <CONNECTION_TIMEOUT_IN_SECONDS>5</CONNECTION_TIMEOUT_IN_SECONDS>
+        <BLACKLIST_NUM_TO_POP>5</BLACKLIST_NUM_TO_POP>
     </p2pcomm>
     <pow>
         <CUDA_GPU_MINE>false</CUDA_GPU_MINE>
@@ -159,9 +168,11 @@
         <GETWORK_SERVER_PORT>4202</GETWORK_SERVER_PORT>
         <DS_POW_DIFFICULTY>5</DS_POW_DIFFICULTY>
         <POW_DIFFICULTY>3</POW_DIFFICULTY>
+        <POW_BOUNDARY_N_DIVIDED>8</POW_BOUNDARY_N_DIVIDED>
+        <POW_BOUNDARY_N_DIVIDED_START>32</POW_BOUNDARY_N_DIVIDED_START>
         <POW_SUBMISSION_LIMIT>2</POW_SUBMISSION_LIMIT>
         <NUM_FINAL_BLOCK_PER_POW>100</NUM_FINAL_BLOCK_PER_POW>
-        <POW_CHANGE_TO_ADJ_DIFF>159</POW_CHANGE_TO_ADJ_DIFF>
+        <POW_CHANGE_TO_ADJ_DIFF>99</POW_CHANGE_TO_ADJ_DIFF>
         <POW_CHANGE_TO_ADJ_DS_DIFF>5</POW_CHANGE_TO_ADJ_DS_DIFF>
         <DIFFICULTY_DIFF_TOL>4</DIFFICULTY_DIFF_TOL>
         <EXPECTED_SHARD_NODE_NUM>1800</EXPECTED_SHARD_NODE_NUM>
@@ -169,8 +180,8 @@
         <MISORDER_TOLERANCE_IN_PERCENT>50</MISORDER_TOLERANCE_IN_PERCENT>
         <DSBLOCK_EXTRA_WAIT_TIME>600</DSBLOCK_EXTRA_WAIT_TIME>
         <DIFF_IP_TOLERANCE_IN_PERCENT>10</DIFF_IP_TOLERANCE_IN_PERCENT>
-        <TXN_SHARD_TARGET_DIFFICULTY>100</TXN_SHARD_TARGET_DIFFICULTY>
-        <TXN_DS_TARGET_DIFFICULTY>100</TXN_DS_TARGET_DIFFICULTY>
+        <TXN_SHARD_TARGET_DIFFICULTY>255</TXN_SHARD_TARGET_DIFFICULTY>
+        <TXN_DS_TARGET_DIFFICULTY>255</TXN_DS_TARGET_DIFFICULTY>
         <TXN_DS_TARGET_NUM>600</TXN_DS_TARGET_NUM>
         <PRIORITY_TOLERANCE_IN_PERCENT>50</PRIORITY_TOLERANCE_IN_PERCENT>
     </pow>
@@ -184,8 +195,10 @@
         <RECOVERY_TRIM_INCOMPLETED_BLOCK>false</RECOVERY_TRIM_INCOMPLETED_BLOCK>
         <REJOIN_NODE_NOT_IN_NETWORK>true</REJOIN_NODE_NOT_IN_NETWORK>
         <RESUME_BLACKLIST_DELAY_IN_SECONDS>30</RESUME_BLACKLIST_DELAY_IN_SECONDS>
+        <INCRDB_DSNUMS_WITH_STATEDELTAS>10</INCRDB_DSNUMS_WITH_STATEDELTAS>
     </recovery>
     <smart_contract>
+        <ENABLE_SC>false</ENABLE_SC>
         <SCILLA_ROOT>/scilla</SCILLA_ROOT>
         <SCILLA_CHECKER>bin/scilla-checker</SCILLA_CHECKER>
         <SCILLA_BINARY>bin/scilla-runner</SCILLA_BINARY>
@@ -204,6 +217,9 @@
         <ENABLE_CHECK_PERFORMANCE_LOG>false</ENABLE_CHECK_PERFORMANCE_LOG>
         <FALLBACK_TEST_EPOCH>2</FALLBACK_TEST_EPOCH>
         <NUM_TXN_TO_SEND_PER_ACCOUNT>750</NUM_TXN_TO_SEND_PER_ACCOUNT>
+        <ENABLE_ACCOUNTS_POPULATING>false</ENABLE_ACCOUNTS_POPULATING>
+        <NUM_ACCOUNTS_PREGENERATE>0</NUM_ACCOUNTS_PREGENERATE>
+        <PREGENED_ACCOUNTS_FILE/>
     </tests>
     <transactions>
         <TOTAL_COINBASE_REWARD>8400000000000000000000</TOTAL_COINBASE_REWARD>
@@ -218,6 +234,10 @@
         <PACKET_EPOCH_LATE_ALLOW>1</PACKET_EPOCH_LATE_ALLOW>
         <PACKET_BYTESIZE_LIMIT>1572864</PACKET_BYTESIZE_LIMIT>
         <SMALL_TXN_SIZE>1024</SMALL_TXN_SIZE>
+        <ACCOUNT_IO_BATCH_SIZE>2000000</ACCOUNT_IO_BATCH_SIZE>
+        <ENABLE_REPOPULATE>false</ENABLE_REPOPULATE>
+        <REPOPULATE_STATE_IN_DS>0</REPOPULATE_STATE_IN_DS>
+        <REPOPULATE_STATE_PER_N_DS>10</REPOPULATE_STATE_PER_N_DS>
     </transactions>
     <verifier>
         <VERIFIER_PATH>historicalDB</VERIFIER_PATH>
@@ -232,34 +252,34 @@
     </viewchange>
     <multipliers>
         <peer>
-            <ip>34.218.66.183</ip>
+            <ip>35.166.206.139</ip>
             <port>33133</port>
             <pubkey>026FD9085786876BD857AB3796FE76F44734B044AD04D9ED7A25AE42CBDE782ED5</pubkey>
-            <hostname>mainnet-serangoon-multiplier-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-multiplier-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>18.237.4.181</ip>
+            <ip>54.202.141.237</ip>
             <port>33133</port>
             <pubkey>028A419BF2D7DCEF032AD04F871CC5C7BFCB4AB01976FAF946E238EB7C63311472</pubkey>
-            <hostname>mainnet-serangoon-multiplier-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-multiplier-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>52.27.239.148</ip>
+            <ip>34.220.28.121</ip>
             <port>33133</port>
             <pubkey>02F4CF1F1E62D6E85ADF95B309F25601FFA71514F53A60B405ED71E9050206077B</pubkey>
-            <hostname>mainnet-serangoon-multiplier-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-multiplier-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>35.163.13.248</ip>
+            <ip>52.11.21.34</ip>
             <port>33133</port>
             <pubkey>03D72559341CA9E635217AEBFD06153792D17078904F06E6F68393EE0D863BA1BF</pubkey>
-            <hostname>mainnet-serangoon-multiplier-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-multiplier-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.208.133.232</ip>
+            <ip>54.188.151.243</ip>
             <port>33133</port>
             <pubkey>03D8C178FE9C153D8547A2CC2ADD730A59D1134DC3B1AE55AEE05D9E5B11CE56DC</pubkey>
-            <hostname>mainnet-serangoon-multiplier-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-multiplier-4.aws.zilliqa.com</hostname>
         </peer>
     </multipliers>
     <accounts>
@@ -275,66 +295,66 @@
     </accounts>
     <lookups>
         <peer>
-            <ip>52.24.66.141</ip>
+            <ip>34.221.157.218</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.215.137.93</ip>
+            <ip>52.27.145.116</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.219.217.181</ip>
+            <ip>34.220.73.30</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>52.27.73.201</ip>
+            <ip>52.13.221.208</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.184.34.217</ip>
+            <ip>54.202.235.38</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </lookups>
     <upper_seed>
         <peer>
-            <ip>52.24.66.141</ip>
+            <ip>34.221.157.218</ip>
             <pubkey>025D438F8B102A61D2306FE6856D8F87F8EC0E1E22176AE9C5A8110424467A9486</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-0.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-0.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.215.137.93</ip>
+            <ip>52.27.145.116</ip>
             <pubkey>03038A400644F300CAFDFAAE0D55CC6837CA9C8EEFE44DBCDC88596FDF12A30FC1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-1.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-1.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>34.219.217.181</ip>
+            <ip>34.220.73.30</ip>
             <pubkey>03118D49D4FDD81127C365D4760D40B241B6FE550B6571CD4B49EDA13FF0F29E0D</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-2.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-2.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>52.27.73.201</ip>
+            <ip>52.13.221.208</ip>
             <pubkey>03A137D5730A17B57215219B3E58F20C411907971431C0E8DF720B936ECFB3F7E1</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-3.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-3.aws.zilliqa.com</hostname>
         </peer>
         <peer>
-            <ip>54.184.34.217</ip>
+            <ip>54.202.235.38</ip>
             <pubkey>03A940303B869120D21AB74BEDA97F6223D1F7B0D271F3A94DA3AF6F63402C98A9</pubkey>
             <port>33133</port>
-            <hostname>mainnet-serangoon-lookup-4.aws.zilliqa.com</hostname>
+            <hostname>mainnet-changi-lookup-4.aws.zilliqa.com</hostname>
         </peer>
     </upper_seed>
     <lower_seed/>
